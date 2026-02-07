@@ -1,5 +1,3 @@
-# etl.py
-
 import csv
 
 def read_csv(file_path):
@@ -9,7 +7,6 @@ def read_csv(file_path):
     return data
 
 def transform_data(data):
-    # Exemplo de transformação simples: filtrar linhas com valor maior que 10
     result = []
     for row in data:
         try:
@@ -22,7 +19,7 @@ def transform_data(data):
 
 def write_csv(data, output_path):
     if not data:
-        print("Nenhum dado para escrever.")
+        print("There's no data written yet.")
         return
 
     headers = data[0].keys()
@@ -32,11 +29,12 @@ def write_csv(data, output_path):
         writer.writerows(data)
 
 if __name__ == "__main__":
-    input_file = "dados.csv"
-    output_file = "dados_filtrados.csv"
+    input_file = "data.csv"
+    output_file = "filtered_data.csv"
 
     data = read_csv(input_file)
     filtered = transform_data(data)
     write_csv(filtered, output_file)
 
-    print("ETL concluído!")
+    print("ETL Finished!")
+
