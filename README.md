@@ -3,7 +3,7 @@
 This repository contains a simple example of a data pipeline built with Python.
 
 ## What it does
-- Reads data from a CSV file (`dados.csv`)
+- Reads data from a CSV file (`data.csv`)
 - Filters records where the `valor` field is greater than 10
 - Writes the filtered data to a new CSV file (`filtered_data.csv`)
 
